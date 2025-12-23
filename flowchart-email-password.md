@@ -13,9 +13,9 @@ flowchart TB
  A@{ shape: circ, label: "start"} 
  B@{ shape: lean-r, label: "input: email, password"}
  C@{ shape: rect, label: 'EMAIL="admin@mail.com", PASSWORD="1234"'}
- D@{ shape: diamond, label: "email == ' ' || password == ' ' "}
+ D@{ shape: diamond, label: "email == ' ' && password == ' ' "}
  X@{ shape: lean-r, label: "output: 'Email dan Password harus di isi'"}
- E@{ shape: diamond , label: "email == email && password == password "}
+ E@{ shape: diamond , label: "email == EMAIL && password == PASSWORD "}
  F@{ shape: lean-r, label: "Output: 'Login berhasil'"}
  G@{ shape: lean-r, label: "Output: 'Email atau Password Salah'"}
  Z@{ shape: dbl-circ, label: "stop"}
