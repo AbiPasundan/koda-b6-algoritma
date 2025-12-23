@@ -11,7 +11,7 @@ flowchart TB
  A-->B-->
  C-->|Hasilnya 0|D[Genap]
  C-->|Hasilnya bukan 0|E[Ganjil]
- B-->X-->Y
+ B-->X-->Y-->Z
  E-->Z
  D-->Z
 ```
