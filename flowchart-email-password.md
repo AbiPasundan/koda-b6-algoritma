@@ -11,11 +11,11 @@ flowchart-email-password.md
 ```mermaid
 flowchart TB
  A@{ shape: circ, label: "start"} 
- B@{ shape: lean-r, label: "email: 'Email'"}
- C@{ shape: lean-r, label: "password: 'Password'"}
+ B@{ shape: lean-r, label: "input: email, password"}
+ C@{ shape: rect, label: 'EMAIL="admin@mail.com", PASSWORD="1234"'}
  D@{ shape: diamond, label: "email == ' ' || password == ' ' "}
  X@{ shape: lean-r, label: "output: 'Email dan Password harus di isi'"}
- E@{ shape: diamond , label: "email == 'admin@mail.com' && password == '1234 ' "}
+ E@{ shape: diamond , label: "email == email && password == password "}
  F@{ shape: lean-r, label: "Output: 'Login berhasil'"}
  G@{ shape: lean-r, label: "Output: 'Email atau Password Salah'"}
  Z@{ shape: dbl-circ, label: "stop"}
