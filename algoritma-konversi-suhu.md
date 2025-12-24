@@ -15,6 +15,8 @@
 flowchart TB
  Start@{ shape: circ, label: "start"} 
  Input@{ shape: lean-l, label: "input: celcius"} 
+ Validation@{ shape: diamond, label: "celcius == number"} 
+ ValidationWarning@{ shape: rect, label: "masukan type data number"} 
  CelciusToFarenheit@{ shape: rect, label: "(celcius * 9/5) + 32"} 
  CelciusToReamur@{ shape: rect, label: "celcius * 4 / 5"} 
  CelciusToKelvin@{ shape: rect, label: "celcius + 273"} 
@@ -23,5 +25,8 @@ flowchart TB
  OutputCelciusToKelvin@{ shape: lean-l, label: "Output: Kelvin"} 
  Stop@{ shape: dbl-circ, label: "stop"}
 
- Start-->Input-->CelciusToFarenheit-->OutputCelciusToFarenheit-->CelciusToReamur-->OutputCelciusToReamur-->CelciusToKelvin-->OutputCelciusToKelvin-->Stop
+ Start-->Input-->Validation-->|true|CelciusToFarenheit-->OutputCelciusToFarenheit-->CelciusToReamur-->OutputCelciusToReamur-->CelciusToKelvin-->OutputCelciusToKelvin-->Stop
+
+ Validation-->|false|ValidationWarning-->Input
+
 ```
