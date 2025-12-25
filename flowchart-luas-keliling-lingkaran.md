@@ -1,17 +1,18 @@
+# Heading
+
 ```mermaid
+
 flowchart TB
  A@{ shape: circ, label: "start"} 
  B@{ shape: lean-r, label: "r = 4"}
- C@{ shape: lean-r, label: "Phi = 3.14"}
- D@{ shape: rect, label: "2 * Phi * r" }
- E@{ shape: lean-r, label: "K = 25"}
- F@{ shape: rect, label: "2 * r"}
- G@{ shape: lean-r, label: "d = 8"}
- H@{ shape: rect, label: "Phi * r * r"}
- I@{ shape: lean-r, label: "L = 50"}
- Z@{ shape: dbl-circ, label: "stop"}
+ C@{ shape: rect, label: "phi = 3.14" }
+ Luas@{ shape: rect, label: "L = phi * r * r" }
+ Keliling@{ shape: rect, label: "K = 2 * phi * r" }
+ Diameter@{ shape: rect, label: "phi = 2 * 4" }
+ OutputLuas@{ shape: lean-r, label: "phi = 3.14" }
+ OutputKeliling@{ shape: lean-r, label: "phi = 3.14" }
+ OutputDiameter@{ shape: lean-r, label: "phi = 3.14" }
+ Stop@{ shape: dbl-circ, label: "Stop" }
 
-
-A-->B-->C-->D-->E-->F-->G-->H-->I-->Z
-
+A-->B-->C-->Luas-->Keliling-->Diameter-->OutputLuas-->OutputKeliling-->OutputDiameter-->Stop
 ```
